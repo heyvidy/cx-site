@@ -71,7 +71,8 @@ body {
 }
 
 .f-22 {
-    font-size: 22px
+    font-size: 22px;
+    color: #111;
 }
 
 .pad-vertical {
@@ -210,4 +211,43 @@ body {
 .exposed-div {
     background: url(../assets/bg.png);
     background-repeat: no-repeat;
+}
+
+.counter-text {
+    font-family: Avenir Next LT Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 60px;
+    /* identical to box height */
+    text-align: center;
+    color: #242AD0;
+}
+
+.counter-subtext {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 160%;
+    /* or 29px */
+    color: #444444;
+}
+
+.approach-div {
+    min-height: 400px;
+    background: url(../assets/bg2.svg), linear-gradient(180deg, #FFFCF6 0%, rgba(255, 252, 247, 0) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.body-text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    /* or 26px */
+    color: #777777;
 }
