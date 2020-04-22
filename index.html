@@ -9,6 +9,8 @@
     <!-- CSS Imports -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
 
 
 
@@ -19,9 +21,8 @@
 </head>
 
 <body>
-    <section class="header-bg">
-        <div id="particles-js" style="position:absolute; width:100%; z-index: 1!important;"></div>
-        <div class="header-overlay" style="z-index: 2;">
+    <section style="background: url(../assets/3.jpg); background-size: cover; background-position: center center;  min-height: 80vh;" class="header-bg">
+        <div class="header-overlay" id="home">
             <nav class="navbar navbar-expand-lg navbar-dark" style="background: transparent;">
                 <div class="container">
                     <img src="assets/cx_logo.png" height="40" alt="">
@@ -31,28 +32,56 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ml-auto">
-                            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link" href="#">Features</a>
-                            <a class="nav-item nav-link" href="#">Pricing</a>
-                            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            <a class="nav-item nav-link" data-scroll href="#home">Home</a>
+                            <a class="nav-item nav-link" data-scroll href="#about">About</a>
+                            <a class="nav-item nav-link" data-scroll href="#why-continuity">Why ContinuityX</a>
+                            <a class="nav-item nav-link" data-scroll href="#exposed">Exposed?</a>
+                            <a class="nav-item nav-link" data-scroll href="#approach">Approach</a>
                         </div>
                     </div>
                 </div>
             </nav>
             <div class="container">
                 <div class="d-flex header-hero">
-                    <div class="hero-div">
+                    <div id="particles-js" style="position:absolute; width:100%; z-index: 1!important;"></div>
+                    <div class="hero-div" style="z-index: 99;">
                         <h1 class="hero">Your remote future, now secure.</h1>
                         <p class="subhero">Protecting your organization from the latest Gen V cyber attacks is now simple, flexible & unified.</p>
-                        <a href="#" class="btn btn-lg btn-danger">Get Started</a>
-                        <a href="#" class="btn btn-lg btn-outline-light">Learn More</a>
+                        <a href="#" class="h-learn-more">Get Started</a>
+                        <a href="#" data-toggle="modal" data-target="#video-modal" class="h-learn-more-outline">
+                            <span class="zmdi zmdi-play-circle" style="margin-right:5px"></span> Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Start of Video Pop-up Modal -->
+    <div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Editable Div : Replace the iFrame below with any other iFrame of the video you want.-->
+                    <iframe width="100%" height="615" src="https://www.youtube-nocookie.com/embed/CF5UG2TuWz8?start=300" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- End of Editable div -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Video Modal -->
+
+
+
+
+
     <br><br>
-    <section class="container pad-vertical ">
+    <section class="container pad-vertical" id="about">
         <div class="centered pad-vertical pad-horizontal">
             <p class="f-22">
                 Continuity-X is a security architecture designed by the M-87 team to help protect organizations from the latest Gen V cyber attacks. It’s designed to enable enterprises big and small to utilize the full potenital of the internet securly, in a unified,
@@ -98,7 +127,7 @@
         </div>
     </section>
     <br><br>
-    <section class="light-carrot-bg pad-vertical">
+    <section class="light-carrot-bg pad-vertical" id="why-continuity">
         <div class="container">
             <div class="centered pad-vertical pad-horizontal">
                 <img src="assets/icons/shield.svg" class="info-card-icon">
@@ -296,7 +325,7 @@
     </section>
     <hr style="margin:0">
 
-    <section class="exposed-div pad-vertical">
+    <section class="exposed-div pad-vertical" id="exposed">
         <div class="container">
 
             <div class="centered">
@@ -383,7 +412,7 @@
     <br>
     <hr style="margin:1px">
 
-    <section class="pad-vertical" style="background: #FAFCFF;">
+    <section class="pad-vertical" style="background: #FAFCFF;" id="approach">
         <br>
         <div class="container pad-horizontal">
             <div class="row">
@@ -396,21 +425,21 @@
                     </p>
                 </div>
                 <div class="col-md-3 centered">
-                    <p class="counter-text">
+                    <p class="counter-text" id="integrations">
                         319
                     </p>
                     <p class="counter-subtext">
                         Integrations </p>
                 </div>
                 <div class="col-md-3 centered">
-                    <p class="counter-text">
+                    <p class="counter-text" id="brands">
                         31
                     </p>
                     <p class="counter-subtext">
                         Brands </p>
                 </div>
                 <div class="col-md-3 centered">
-                    <p class="counter-text">
+                    <p class="counter-text" id="cases">
                         151
                     </p>
                     <p class="counter-subtext">
@@ -428,8 +457,7 @@
                 <img src="assets/icons/list.svg" class="info-card-icon">
                 <p class="hero dark thin">The Approach</p>
                 <p class="f-22">
-                    Upholding technology as a force for good.
-
+                    Upholding technology as a force for good.</p>
             </div>
             <br><br><br><br>
             <div class="row">
@@ -483,6 +511,79 @@
             </div>
         </div>
     </section>
+    <br>
+    <section class="container pad-vertical">
+        <div class="centered">
+            <br><br>
+            <p class="hero dark thin">See What's New</p>
+            <p class="f-22">
+                Stay up to date with ContinuityX
+            </p>
+        </div>
+        <div class="blog-card-holder pad-vertical">
+            <div class="blog-card">
+                <img src="assets/3.jpg" alt="">
+                <div class="body">
+                    <p class="date">April 22, 2020</p>
+                    <p class="f-22">Working on Cloud Security</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                    <br><br>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="assets/1.jpg" alt="">
+                <div class="body">
+                    <p class="date">April 22, 2020</p>
+                    <p class="f-22">So ContinuityX, Are you SIEM?</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                    <br><br>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="assets/2.jpg" alt="">
+                <div class="body">
+                    <p class="date">April 22, 2020</p>
+                    <p class="f-22">Be Care Free about Security Infra</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                    <br><br>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="assets/2.jpg" alt="">
+                <div class="body">
+                    <p class="date">April 22, 2020</p>
+                    <p class="f-22">Working on Cloud Security</p>
+                    <a href="#" class="learn-more">Learn More</a>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section class="footer pad-vertical">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
 
     <!-- Javascript Imports -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -490,7 +591,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
     <script src="js/app.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
     <!-- End of JS Imports -->
 </body>
 

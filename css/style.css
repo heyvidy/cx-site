@@ -13,12 +13,6 @@ body {
     font-family: Avenir Next LT Pro;
 }
 
-.header-bg {
-    background: url(../assets/1.jpg);
-    min-height: 80vh;
-    background-size: cover;
-}
-
 .header-overlay {
     background: linear-gradient(179.88deg, rgba(3, 1, 121, 0.7) 1.51%, rgba(22, 4, 44, 0.7) 99.82%);
     height: 100%;
@@ -32,7 +26,7 @@ body {
 
 .hero-div {
     text-align: center;
-    padding: 0 30px 50px 30px;
+    margin: 0 0px 80px 30px;
 }
 
 .hero {
@@ -250,4 +244,110 @@ body {
     line-height: 160%;
     /* or 26px */
     color: #777777;
+}
+
+.blog-card-holder {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    width: 300px;
+    max-width: 400px;
+    background: #faf8ff;
+    border-radius: 3px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px #eee;
+}
+
+.blog-card>img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.blog-card>.body>.f-22 {
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.blog-card>.body {
+    padding: 10px 40px;
+}
+
+.blog-card>.body>.date {
+    margin: 5px 0;
+    color: #888;
+    font-size: 14px;
+}
+
+.learn-more {
+    background: #5C5CFF;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.learn-more:hover {
+    background: #c9c5ff;
+    color: #5C5CFF;
+    text-decoration: none;
+}
+
+.footer {
+    background: #111;
+}
+
+.h-learn-more {
+    background: #5C5CFF;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.h-learn-more:hover {
+    background: #fff;
+    color: #5C5CFF;
+    text-decoration: none;
+}
+
+.h-learn-more-outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 9px 29px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.h-learn-more-outline:hover {
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+}
+
+.modal-content {
+    background: transparent;
+}
+
+.modal-header {
+    border: none;
 }

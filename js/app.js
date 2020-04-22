@@ -1,5 +1,8 @@
 import { CountUp } from '/js/countUp.min.js';
 
+var scroll = new SmoothScroll('a[href*="#"]');
+
+
 particlesJS.load('particles-js', 'js/particle.json', function() {
     console.log('callback - particles.js config loaded');
 });
@@ -18,17 +21,15 @@ let c4 = new CountUp('cases', 151);
 var node = document.querySelector("#devices");
 
 
-if (isInViewport(node)) {
-    c1.start();
-    c2.start();
-    c3.start();
-    c4.start();
-} else {
-    c1.pause();
-    c2.pause();
-    c3.pause();
-    c4.pause();
-}
+setInterval(function() {
+    if (isInViewport(node)) {
+        c1.start();
+        c2.start();
+        c3.start();
+        c4.start();
+    }
+}, 500);
+
 
 
 function isInViewport(elem) {
